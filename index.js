@@ -11,7 +11,7 @@
         descricao: 'Teclado Microsoft'
     })
 
-    console.log(product);
+    // console.log(product);
 
     /* const novoProduto = await Produto.create({
         nome: 'Mouse Usb',
@@ -21,5 +21,13 @@
 
     console.log(novoProduto);
     */
+
+    const produto = await Produto.findByPk(1);
+
+    produto.descricao = 'changed';
+    produto.save();
+
+    console.log(produto);
+
     
 }) ();    
